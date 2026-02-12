@@ -17,11 +17,16 @@ def calculate_max_expenses():
     ]
 
     max_expense = 0
+    winner = ""
     for client in clients:
         expense = 0
         for order in orders:
             if client[0] == order[0]:
                 expense += order[1]
         print(f'user id: {client[0]}, total expenses: {expense}, name: {client[1]}')
+        if expense > max_expense:
+            winner = client[1]
+            max_expense = expense
+    print(f'max expenses: {max_expense}, name: {winner}')
 calculate_max_expenses()
 
