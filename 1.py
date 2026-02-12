@@ -19,9 +19,9 @@ def calculate_max_expenses():
     max_expense = 0
     for client in clients:
         expense = 0
-        client_id = client[0]
         for order in orders:
-            if client_id == order[0]:
+            if client[0] == order[0]:
                 expense += order[1]
+        print(f'user id: {client[0]}, total expenses: {expense}, name: {client[1]}')
 calculate_max_expenses()
 
