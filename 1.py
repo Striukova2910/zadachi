@@ -29,4 +29,5 @@ def calculate_max_expenses():
             max_expense = expense
     print(f'max expenses: {max_expense}, name: {winner}')
 calculate_max_expenses()
+print("qwerty29")
 
