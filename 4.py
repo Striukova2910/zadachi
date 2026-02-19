@@ -18,13 +18,12 @@ def no_expense():
         find_no_expence = False
 
         for i in clients:
-                expense = 0
-                client_expense_count = 0
+                orders_exist = False
                 for order in orders:
                         if i[0] == order[0]:
-                                expense += order[1]
-                                client_expense_count += 1
-                if client_expense_count == 0:
+                            orders_exist = True
+                            break
+                if not orders_exist:
                     find_no_expence = True
                     print(f'client without expense: {i}')
 
