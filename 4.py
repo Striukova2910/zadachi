@@ -7,15 +7,16 @@ clients = [
     ]
 
 orders = [
-        (1, 1200),
+        (3, 1200),
         (2, 800),
-        (1, 600),
-        (3, 1500),
+        (4, 600),
+        (1, 1500),
         (2, 400),
         (1, 300)
     ]
 def no_expense():
-        buyer_0 = []
+        find_no_expence = False
+
         for i in clients:
                 expense = 0
                 client_expense_count = 0
@@ -24,6 +25,11 @@ def no_expense():
                                 expense += order[1]
                                 client_expense_count += 1
                 if client_expense_count == 0:
-                        print(f'client without expense: {i}')
+                    find_no_expence = True
+                    print(f'client without expense: {i}')
+
+
+        if not find_no_expence:
+                        print(f'no client with expense 0')
 
 no_expense()
