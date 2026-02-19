@@ -14,3 +14,16 @@ orders = [
         (2, 400),
         (1, 300)
     ]
+def no_expense():
+        buyer_0 = []
+        for i in clients:
+                expense = 0
+                client_expense_count = 0
+                for order in orders:
+                        if i[0] == order[0]:
+                                expense += order[1]
+                                client_expense_count += 1
+                if client_expense_count == 0:
+                        print(f'client without expense: {i}')
+
+no_expense()
